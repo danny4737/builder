@@ -15,7 +15,7 @@ const NewWebsite = () => {
                     Google AI Studio로 만든 웹사이트
                   </h2>
                   <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
-                    여기에다가 텍스트를 넣을 수 있는 건가?
+                    ㅜ
                   </p>
                   <div className="mt-6">
                     <button className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
