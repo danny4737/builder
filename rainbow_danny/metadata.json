@@ -1,0 +1,5 @@
+{
+  "name": "Neon Brick Breaker - Step 1",
+  "description": "A physics-based brick breaker game prototype focusing on paddle interaction and game loop.",
+  "requestFramePermissions": []
+}
