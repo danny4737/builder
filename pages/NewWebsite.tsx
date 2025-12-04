@@ -15,8 +15,7 @@ const NewWebsite = () => {
                     Google AI Studio로 만든 웹사이트
                   </h2>
                   <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">
-                    지금 보시는 화면은 HTML 코드를 React 컴포넌트로 변환하여 대시보드와 통합한 결과물입니다. 
-                    별도의 수정 없이 바로 사용할 수 있도록 디자인되었습니다.
+                    여기에다가 텍스트를 넣을 수 있는 건가?
                   </p>
                   <div className="mt-6">
                     <button className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
@@ -35,7 +34,7 @@ const NewWebsite = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
 
