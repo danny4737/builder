@@ -10,9 +10,8 @@ const Homepage: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        // 👇 깔끔하게 정리된 데이터 리스트!
+        // 👇 카드 데이터 수정됨!
         const initialWebsites: Website[] = [
-            // 1. 아까 만든 AI 랜딩 페이지 (유지)
             {
                 id: 'new-ai-page',
                 title: 'AI 랜딩 페이지',
@@ -22,15 +21,14 @@ const Homepage: React.FC = () => {
                 category: '웹사이트',
                 path: '/new-website'
             },
-            // 2. 새로 추가한 두 번째 페이지 (NEW!)
             {
                 id: 'second-page',
-                title: '나의 두 번째 프로젝트',
-                description: '대시보드 정리를 완료하고 새로 추가한 페이지입니다.',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                title: '벽돌깨기 게임', // 👈 제목 변경!
+                description: '네온 스타일의 벽돌깨기 게임입니다. 모든 벽돌을 깨보세요!', // 👈 설명 변경!
+                thumbnailUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80', // 👈 게임 느낌 나는 이미지로 변경!
                 createdAt: new Date().toLocaleDateString('ko-KR'),
-                category: '프로젝트', // 카테고리
-                path: '/second-page' // App.tsx에 등록한 주소
+                category: '게임', // 👈 카테고리도 '게임'으로 변경하면 더 좋겠죠?
+                path: '/second-page'
             }
         ];
         setWebsites(initialWebsites);
@@ -53,8 +51,8 @@ const Homepage: React.FC = () => {
         setWebsites(prevWebsites => prevWebsites.filter(site => site.id !== id));
     }, []);
 
-    // 카테고리 목록도 깔끔하게 정리
-    const categories = ['전체', '웹사이트', '프로젝트'];
+    // 카테고리 목록 업데이트 ('프로젝트' -> '게임')
+    const categories = ['전체', '웹사이트', '게임'];
 
     const filteredWebsites =
         selectedCategory === '전체'
