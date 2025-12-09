@@ -10,25 +10,107 @@ const Homepage: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        // 👇 카드 데이터 수정됨!
+        // 👇 사진(thumbnailUrl)을 모두 예쁜 것으로 교체했습니다!
         const initialWebsites: Website[] = [
+            // 1. 앨런쌤 (하트 사진으로 변경)
             {
-                id: 'new-ai-page',
-                title: 'AI 랜딩 페이지',
-                description: '방금 만든 새 웹사이트입니다. 클릭하면 이동합니다!',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+                id: 'allen',
+                title: 'To. 앨런쌤',
+                description: '앨런쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80',
                 createdAt: '2025-01-01',
-                category: '웹사이트',
+                category: 'LOVE',
                 path: '/new-website'
             },
+            // 2. 벽돌깨기 게임
             {
-                id: 'second-page',
-                title: '벽돌깨기 게임', // 👈 제목 변경!
-                description: '네온 스타일의 벽돌깨기 게임입니다. 모든 벽돌을 깨보세요!', // 👈 설명 변경!
-                thumbnailUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80', // 👈 게임 느낌 나는 이미지로 변경!
+                id: 'game',
+                title: '벽돌깨기 게임',
+                description: '네온 스타일의 벽돌깨기 게임입니다.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80',
                 createdAt: new Date().toLocaleDateString('ko-KR'),
-                category: '게임', // 👈 카테고리도 '게임'으로 변경하면 더 좋겠죠?
+                category: '게임',
                 path: '/second-page'
+            },
+            // 3. 존쌤 (축하 파티 느낌)
+            {
+                id: 'john',
+                title: 'To. 존쌤',
+                description: '존쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1514525253440-b393452e3726?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-02',
+                category: 'LOVE',
+                path: '/john'
+            },
+            // 4. 그레이스쌤 (따뜻한 노을)
+            {
+                id: 'grace',
+                title: 'To. 그레이스쌤',
+                description: '그레이스쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1495615080073-6b89c98beddb?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-02',
+                category: 'LOVE',
+                path: '/grace'
+            },
+            // 5. 그리니쌤 (초록초록한 식물)
+            {
+                id: 'greenie',
+                title: 'To. 그리니쌤',
+                description: '그리니쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-02',
+                category: 'LOVE',
+                path: '/greenie'
+            },
+            // 6. 에이버리쌤 (예술적인 물감)
+            {
+                id: 'avery',
+                title: 'To. 에이버리쌤',
+                description: '에이버리쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-02',
+                category: 'LOVE',
+                path: '/avery'
+            },
+            // 7. 데이비드쌤 (시원한 파란색 추상화)
+            {
+                id: 'david',
+                title: 'To. 데이비드쌤',
+                description: '데이비드쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-02',
+                category: 'LOVE',
+                path: '/david'
+            },
+            // 8. 하나쌤 (예쁜 꽃)
+            {
+                id: 'hana',
+                title: 'To. 하나쌤',
+                description: '하나쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1490750967868-58cb7506deed?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-02',
+                category: 'LOVE',
+                path: '/hana'
+            },
+            // 9. 켈리쌤 (감성적인 커피)
+            {
+                id: 'kelly',
+                title: 'To. 켈리쌤',
+                description: '켈리쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-02',
+                category: 'LOVE',
+                path: '/kelly'
+            },
+            // 10. 클로이쌤 (몽환적인 구름)
+            {
+                id: 'chloe',
+                title: 'To. 클로이쌤',
+                description: '클로이쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1516726817505-f5ed8259fab9?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-02',
+                category: 'LOVE',
+                path: '/chloe'
             }
         ];
         setWebsites(initialWebsites);
@@ -51,8 +133,7 @@ const Homepage: React.FC = () => {
         setWebsites(prevWebsites => prevWebsites.filter(site => site.id !== id));
     }, []);
 
-    // 카테고리 목록 업데이트 ('프로젝트' -> '게임')
-    const categories = ['전체', '웹사이트', '게임'];
+    const categories = ['전체', '웹사이트', '게임', 'LOVE'];
 
     const filteredWebsites =
         selectedCategory === '전체'
