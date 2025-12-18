@@ -10,9 +10,18 @@ const Homepage: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        // 👇 사진(thumbnailUrl)을 모두 예쁜 것으로 교체했습니다!
         const initialWebsites: Website[] = [
-            // 1. 앨런쌤 (하트 사진으로 변경)
+            // 🆕 Orbit Rhythm
+            {
+                id: 'rhythm',
+                title: 'Orbit Rhythm',
+                description: '궤도를 따라가는 감각적인 리듬 게임입니다.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1614726365723-49cfae96c693?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '게임',
+                path: '/rhythm-game'
+            },
+            // 1. 앨런쌤
             {
                 id: 'allen',
                 title: 'To. 앨런쌤',
@@ -32,7 +41,7 @@ const Homepage: React.FC = () => {
                 category: '게임',
                 path: '/second-page'
             },
-            // 3. 존쌤 (축하 파티 느낌)
+            // --- 나머지 8명 선생님 ---
             {
                 id: 'john',
                 title: 'To. 존쌤',
@@ -42,7 +51,6 @@ const Homepage: React.FC = () => {
                 category: 'LOVE',
                 path: '/john'
             },
-            // 4. 그레이스쌤 (따뜻한 노을)
             {
                 id: 'grace',
                 title: 'To. 그레이스쌤',
@@ -52,7 +60,6 @@ const Homepage: React.FC = () => {
                 category: 'LOVE',
                 path: '/grace'
             },
-            // 5. 그리니쌤 (초록초록한 식물)
             {
                 id: 'greenie',
                 title: 'To. 그리니쌤',
@@ -62,7 +69,6 @@ const Homepage: React.FC = () => {
                 category: 'LOVE',
                 path: '/greenie'
             },
-            // 6. 에이버리쌤 (예술적인 물감)
             {
                 id: 'avery',
                 title: 'To. 에이버리쌤',
@@ -72,7 +78,6 @@ const Homepage: React.FC = () => {
                 category: 'LOVE',
                 path: '/avery'
             },
-            // 7. 데이비드쌤 (시원한 파란색 추상화)
             {
                 id: 'david',
                 title: 'To. 데이비드쌤',
@@ -82,7 +87,6 @@ const Homepage: React.FC = () => {
                 category: 'LOVE',
                 path: '/david'
             },
-            // 8. 하나쌤 (예쁜 꽃)
             {
                 id: 'hana',
                 title: 'To. 하나쌤',
@@ -92,7 +96,6 @@ const Homepage: React.FC = () => {
                 category: 'LOVE',
                 path: '/hana'
             },
-            // 9. 켈리쌤 (감성적인 커피)
             {
                 id: 'kelly',
                 title: 'To. 켈리쌤',
@@ -102,7 +105,6 @@ const Homepage: React.FC = () => {
                 category: 'LOVE',
                 path: '/kelly'
             },
-            // 10. 클로이쌤 (몽환적인 구름)
             {
                 id: 'chloe',
                 title: 'To. 클로이쌤',
