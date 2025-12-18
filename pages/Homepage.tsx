@@ -11,7 +11,80 @@ const Homepage: React.FC = () => {
 
     useEffect(() => {
         const initialWebsites: Website[] = [
-            // 🆕 Orbit Rhythm
+            // 🆕 카드 게임 추가
+            {
+                id: 'card',
+                title: 'Memory Match',
+                description: '뒤집힌 카드의 짝을 찾아라! 기억력 테스트 게임입니다.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '게임',
+                path: '/card-game'
+            },
+            // 기존 카드들...
+            {
+                id: 'golf',
+                title: 'AI Mini Golf',
+                description: '물리와 전략이 만났다! AI 캐디와 함께 홀인원에 도전하세요.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '게임',
+                path: '/golf-game'
+            },
+            {
+                id: 'aim',
+                title: 'Aim Lab (AI Coach)',
+                description: '당신의 반응속도와 정확도를 테스트하세요! AI 코치가 분석해줍니다.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '게임',
+                path: '/aim-game'
+            },
+            {
+                id: 'racer',
+                title: 'AI Speed Racer',
+                description: '끝없이 펼쳐지는 도로를 질주하세요! AI가 실시간으로 해설해줍니다.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '게임',
+                path: '/racer-game'
+            },
+            {
+                id: 'diary',
+                title: '마음 챙김 일기 (AI)',
+                description: '오늘 하루는 어땠나요? AI가 당신의 감정을 분석하고 위로해줍니다.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '웹사이트',
+                path: '/diary'
+            },
+            {
+                id: 'sketch',
+                title: 'Sketch Pro (AI)',
+                description: 'AI가 내 그림을 분석해주는 스마트 드로잉 앱입니다.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '웹사이트',
+                path: '/sketch-pro'
+            },
+            {
+                id: 'ladder',
+                title: '스마트 사다리 타기',
+                description: '친구들과 간식 내기 한 판! 직관적인 사다리 게임입니다.',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '게임',
+                path: '/ladder-game'
+            },
+            {
+                id: 'tetris',
+                title: 'Drag-tris',
+                description: '마우스로 드래그해서 맞추는 신개념 테트리스!',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1596443686812-2f45229eebc3?auto=format&fit=crop&w=800&q=80',
+                createdAt: new Date().toLocaleDateString('ko-KR'),
+                category: '게임',
+                path: '/tetris-game'
+            },
             {
                 id: 'rhythm',
                 title: 'Orbit Rhythm',
@@ -21,17 +94,6 @@ const Homepage: React.FC = () => {
                 category: '게임',
                 path: '/rhythm-game'
             },
-            // 1. 앨런쌤
-            {
-                id: 'allen',
-                title: 'To. 앨런쌤',
-                description: '앨런쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-01',
-                category: 'LOVE',
-                path: '/new-website'
-            },
-            // 2. 벽돌깨기 게임
             {
                 id: 'game',
                 title: '벽돌깨기 게임',
@@ -41,78 +103,14 @@ const Homepage: React.FC = () => {
                 category: '게임',
                 path: '/second-page'
             },
-            // --- 나머지 8명 선생님 ---
             {
-                id: 'john',
-                title: 'To. 존쌤',
-                description: '존쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1514525253440-b393452e3726?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-02',
+                id: 'allen',
+                title: 'To. 앨런쌤',
+                description: '앨런쌤 사랑해요❤️',
+                thumbnailUrl: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80',
+                createdAt: '2025-01-01',
                 category: 'LOVE',
-                path: '/john'
-            },
-            {
-                id: 'grace',
-                title: 'To. 그레이스쌤',
-                description: '그레이스쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1495615080073-6b89c98beddb?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-02',
-                category: 'LOVE',
-                path: '/grace'
-            },
-            {
-                id: 'greenie',
-                title: 'To. 그리니쌤',
-                description: '그리니쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-02',
-                category: 'LOVE',
-                path: '/greenie'
-            },
-            {
-                id: 'avery',
-                title: 'To. 에이버리쌤',
-                description: '에이버리쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-02',
-                category: 'LOVE',
-                path: '/avery'
-            },
-            {
-                id: 'david',
-                title: 'To. 데이비드쌤',
-                description: '데이비드쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-02',
-                category: 'LOVE',
-                path: '/david'
-            },
-            {
-                id: 'hana',
-                title: 'To. 하나쌤',
-                description: '하나쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1490750967868-58cb7506deed?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-02',
-                category: 'LOVE',
-                path: '/hana'
-            },
-            {
-                id: 'kelly',
-                title: 'To. 켈리쌤',
-                description: '켈리쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-02',
-                category: 'LOVE',
-                path: '/kelly'
-            },
-            {
-                id: 'chloe',
-                title: 'To. 클로이쌤',
-                description: '클로이쌤 사랑해요❤️',
-                thumbnailUrl: 'https://images.unsplash.com/photo-1516726817505-f5ed8259fab9?auto=format&fit=crop&w=800&q=80',
-                createdAt: '2025-01-02',
-                category: 'LOVE',
-                path: '/chloe'
+                path: '/new-website'
             }
         ];
         setWebsites(initialWebsites);

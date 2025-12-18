@@ -4,17 +4,16 @@ import Layout from './pages/Layout';
 import Homepage from './pages/Homepage';
 import NewWebsite from './pages/NewWebsite';
 import SecondPage from './pages/SecondPage';
-import RhythmGame from './pages/RhythmGame'; // 👈 추가됨
-
-// 8명 선생님 파일
-import JohnPage from './pages/JohnPage';
-import GracePage from './pages/GracePage';
-import GreeniePage from './pages/GreeniePage';
-import AveryPage from './pages/AveryPage';
-import DavidPage from './pages/DavidPage';
-import HanaPage from './pages/HanaPage';
-import KellyPage from './pages/KellyPage';
-import ChloePage from './pages/ChloePage';
+import RhythmGame from './pages/RhythmGame';
+import TetrisGame from './tetris_danny/TetrisGame';
+import LadderGame from './ladder_game/LadderGame';
+import SketchPage from './sketchpro_danny/SketchPage';
+import DiaryPage from './diary_danny/DiaryPage';
+import RacerGame from './racer_danny/RacerGame';
+import AimGame from './aimlab_danny/AimGame';
+import GolfGame from './minigolf_danny/GolfGame';
+// 👇 카드 게임 불러오기
+import MemoryGame from './CardGame_danny/MemoryGame';
 
 function App() {
   return (
@@ -26,17 +25,16 @@ function App() {
           <Route path="new-website" element={<NewWebsite />} />
           <Route path="second-page" element={<SecondPage />} />
           <Route path="rhythm-game" element={<RhythmGame />} />
-
-          {/* 선생님들 */}
-          <Route path="john" element={<JohnPage />} />
-          <Route path="grace" element={<GracePage />} />
-          <Route path="greenie" element={<GreeniePage />} />
-          <Route path="avery" element={<AveryPage />} />
-          <Route path="david" element={<DavidPage />} />
-          <Route path="hana" element={<HanaPage />} />
-          <Route path="kelly" element={<KellyPage />} />
-          <Route path="chloe" element={<ChloePage />} />
-
+          <Route path="tetris-game" element={<TetrisGame />} />
+          <Route path="ladder-game" element={<LadderGame />} />
+          <Route path="sketch-pro" element={<SketchPage />} />
+          <Route path="diary" element={<DiaryPage />} />
+          <Route path="racer-game" element={<RacerGame />} />
+          <Route path="aim-game" element={<AimGame />} />
+          <Route path="golf-game" element={<GolfGame />} />
+          
+          {/* 👇 카드 게임 경로 추가 */}
+          <Route path="card-game" element={<MemoryGame />} />
         </Route>
       </Routes>
     </HashRouter>
